@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://w5o3nngv0gvy"]
+
+[ext_resource type="PackedScene" uid="uid://cvgpir5r2b48k" path="res://glb_models/a755ebabb1b42ca65028c6a931ba9e28.glb" id="1"]
+
+[node name="Budda" unique_id=403100108 instance=ExtResource("1")]

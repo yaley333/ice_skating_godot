@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d0hhwol8nmxql"]
+
+[ext_resource type="PackedScene" uid="uid://b5dxhbdstnaqq" path="res://glb_models/ae39de7c664b7dfa87702ca4d712058c.glb" id="1"]
+
+[node name="death-dino" unique_id=2078320943 instance=ExtResource("1")]

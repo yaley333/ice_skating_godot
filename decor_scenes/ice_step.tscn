@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://0cqd4ndojujj"]
+
+[ext_resource type="Script" uid="uid://cc52dxt8n3olo" path="res://player/ice_step.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dv84lpavuox40" path="res://textures/ice_step.png" id="2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2xlr4"]
+transparency = 1
+albedo_texture = ExtResource("2")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2xlr4"]
+
+[node name="SkateMark" type="Node3D" unique_id=808349034]
+script = ExtResource("1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1035675654]
+transform = Transform3D(0.27312544, 0, 0, 0, 1, 0, 0, 0, 0.27368963, 0.24572963, 0, 0)
+material_override = SubResource("StandardMaterial3D_2xlr4")
+mesh = SubResource("PlaneMesh_2xlr4")

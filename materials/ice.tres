@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cd8frj1cffwb"]
+
+[ext_resource type="Texture2D" uid="uid://pf6yyacl8uwj" path="res://textures/ice.jpg" id="1"]
+
+[resource]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.654902)
+albedo_texture = ExtResource("1")
+metallic = 0.6
+roughness = 0.2
+emission = Color(0.31135654, 0.31135657, 0.31135654, 1)
+emission_energy_multiplier = 5.87
+normal_scale = -16.0
+rim_tint = 1.0
+detail_enabled = true
+detail_blend_mode = 1
+uv1_scale = Vector3(0.055, 0.03, 0.03)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.045752686
+uv1_world_triplanar = true
+billboard_keep_scale = true
+stencil_flags = 2

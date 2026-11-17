@@ -1,0 +1,33 @@
+GDRE Tools v2.7.4
+Windows 10.0.26200, AMD Radeon(TM) Graphics, vulkan
+Opening file: C:/Users/admin/Downloads/ice-skating-win-low/ice_skating.pck
+Loaded 296 imported files
+Detected Engine Version: 4.6.0
+Detected Bytecode Revision: 4.5.0-stable (ebc36a7)
+Verified 600 files, no errors detected!
+Extracted 600 files, no errors detected!
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     16
+Scripts not decompiled:                 0
+Imported resources for export session:  296
+Successfully converted:                 296
+Lossy:                                  158
+Rewrote metadata:                       224
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.6.0 to edit the project.
+
+*******************************************************************************
+

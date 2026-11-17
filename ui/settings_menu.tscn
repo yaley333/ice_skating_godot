@@ -1,0 +1,477 @@
+[gd_scene format=3 uid="uid://bq8rsmh8v3vid"]
+
+[ext_resource type="Script" uid="uid://dtpsypbvilv4g" path="res://scripts/ui/settings_menu.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="1_panel"]
+content_margin_left = 24.0
+content_margin_top = 22.0
+content_margin_right = 24.0
+content_margin_bottom = 22.0
+bg_color = Color(0.12, 0.16, 0.22, 0.86)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.84, 0.95, 0.35)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0, 0, 0, 0.35)
+shadow_size = 16
+shadow_offset = Vector2(0, 8)
+
+[sub_resource type="StyleBoxFlat" id="2_btn_normal"]
+content_margin_left = 16.0
+content_margin_top = 12.0
+content_margin_right = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.2, 0.26, 0.34, 0.9)
+border_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="4_btn_pressed"]
+content_margin_left = 16.0
+content_margin_top = 12.0
+content_margin_right = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.16, 0.22, 0.3, 0.95)
+border_color = Color(0.8, 0.9, 1, 0.2)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="3_btn_hover"]
+content_margin_left = 16.0
+content_margin_top = 12.0
+content_margin_right = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.23, 0.3, 0.4, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.47067332, 0.84926385, 0.9999998, 0)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0.2, 0.7, 1, 0.2)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="5_panel_small"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 10.0
+bg_color = Color(0.12, 0.16, 0.22, 0.86)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.84, 0.95, 0.35)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 12
+shadow_offset = Vector2(0, 6)
+
+[node name="SettingsMenu" type="Control" unique_id=1631758347]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1959259985]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06100855, 0.09320182, 0.11774104, 1)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=2073472358]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center" unique_id=652752555]
+layout_mode = 2
+theme_override_styles/panel = SubResource("1_panel")
+
+[node name="Scroll" type="ScrollContainer" parent="Center/Panel" unique_id=1148482142]
+custom_minimum_size = Vector2(520, 740)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="Center/Panel/Scroll" unique_id=1037254082]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Title" type="Label" parent="Center/Panel/Scroll/VBox" unique_id=1988329253]
+modulate = Color(0.8, 0.95, 1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="SpacerTop" type="Control" parent="Center/Panel/Scroll/VBox" unique_id=106542666]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="SensitivityRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=352880870]
+layout_mode = 2
+alignment = 1
+
+[node name="SensitivityLabel" type="Label" parent="Center/Panel/Scroll/VBox/SensitivityRow" unique_id=689482552]
+layout_mode = 2
+text = "Чувствительность"
+
+[node name="SensitivityValue" type="Label" parent="Center/Panel/Scroll/VBox/SensitivityRow" unique_id=1102981769]
+layout_mode = 2
+text = "50"
+
+[node name="SensitivitySlider" type="HSlider" parent="Center/Panel/Scroll/VBox" unique_id=1031489112]
+layout_mode = 2
+value = 50.0
+
+[node name="SfxRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=79136876]
+layout_mode = 2
+alignment = 1
+
+[node name="SfxLabel" type="Label" parent="Center/Panel/Scroll/VBox/SfxRow" unique_id=827479882]
+layout_mode = 2
+text = "Звуки"
+
+[node name="SfxValue" type="Label" parent="Center/Panel/Scroll/VBox/SfxRow" unique_id=2032529620]
+layout_mode = 2
+text = "70"
+
+[node name="SfxSlider" type="HSlider" parent="Center/Panel/Scroll/VBox" unique_id=1847951704]
+layout_mode = 2
+value = 70.0
+
+[node name="MusicRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=352137141]
+layout_mode = 2
+alignment = 1
+
+[node name="MusicLabel" type="Label" parent="Center/Panel/Scroll/VBox/MusicRow" unique_id=1148154218]
+layout_mode = 2
+text = "Музыка"
+
+[node name="MusicValue" type="Label" parent="Center/Panel/Scroll/VBox/MusicRow" unique_id=1410897586]
+layout_mode = 2
+text = "70"
+
+[node name="MusicSlider" type="HSlider" parent="Center/Panel/Scroll/VBox" unique_id=1939563656]
+layout_mode = 2
+value = 70.0
+
+[node name="LanguageRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=-2145090795]
+layout_mode = 2
+alignment = 1
+
+[node name="LanguageLabel" type="Label" parent="Center/Panel/Scroll/VBox/LanguageRow" unique_id=-2145090794]
+layout_mode = 2
+text = "Язык"
+
+[node name="LanguageOption" type="OptionButton" parent="Center/Panel/Scroll/VBox/LanguageRow" unique_id=-2145090793]
+layout_mode = 2
+
+[node name="GraphicsSectionLabel" type="Label" parent="Center/Panel/Scroll/VBox" unique_id=2047816504]
+layout_mode = 2
+text = "Настройки графики"
+
+[node name="GraphicsScaleRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=980265845]
+layout_mode = 2
+alignment = 1
+
+[node name="GraphicsScaleLabel" type="Label" parent="Center/Panel/Scroll/VBox/GraphicsScaleRow" unique_id=786137955]
+layout_mode = 2
+text = "Разрешение"
+
+[node name="GraphicsScaleValue" type="Label" parent="Center/Panel/Scroll/VBox/GraphicsScaleRow" unique_id=1103476059]
+layout_mode = 2
+text = "100"
+
+[node name="GraphicsScaleSlider" type="HSlider" parent="Center/Panel/Scroll/VBox" unique_id=1840976821]
+layout_mode = 2
+min_value = 50.0
+max_value = 120.0
+value = 100.0
+
+[node name="AA_Row" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=1520684188]
+layout_mode = 2
+alignment = 1
+
+[node name="AA_Label" type="Label" parent="Center/Panel/Scroll/VBox/AA_Row" unique_id=1547251306]
+layout_mode = 2
+text = "Сглаживание"
+
+[node name="AA_Check" type="CheckBox" parent="Center/Panel/Scroll/VBox/AA_Row" unique_id=1241791012]
+layout_mode = 2
+button_pressed = true
+
+[node name="SSAO_Row" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=1521443088]
+layout_mode = 2
+alignment = 1
+
+[node name="SSAO_Label" type="Label" parent="Center/Panel/Scroll/VBox/SSAO_Row" unique_id=1073709797]
+layout_mode = 2
+text = "SSAO"
+
+[node name="SSAO_Check" type="CheckBox" parent="Center/Panel/Scroll/VBox/SSAO_Row" unique_id=1796405669]
+layout_mode = 2
+button_pressed = true
+
+[node name="SSR_Row" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=839521254]
+layout_mode = 2
+alignment = 1
+
+[node name="SSR_Label" type="Label" parent="Center/Panel/Scroll/VBox/SSR_Row" unique_id=1933147419]
+layout_mode = 2
+text = "SSR"
+
+[node name="SSR_Check" type="CheckBox" parent="Center/Panel/Scroll/VBox/SSR_Row" unique_id=680370324]
+layout_mode = 2
+button_pressed = true
+
+[node name="SSIL_Row" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=710421828]
+layout_mode = 2
+alignment = 1
+
+[node name="SSIL_Label" type="Label" parent="Center/Panel/Scroll/VBox/SSIL_Row" unique_id=1623003323]
+layout_mode = 2
+text = "SSIL"
+
+[node name="SSIL_Check" type="CheckBox" parent="Center/Panel/Scroll/VBox/SSIL_Row" unique_id=2113646668]
+layout_mode = 2
+button_pressed = true
+
+[node name="SDFGI_Row" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=1767339674]
+layout_mode = 2
+alignment = 1
+
+[node name="SDFGI_Label" type="Label" parent="Center/Panel/Scroll/VBox/SDFGI_Row" unique_id=1618339353]
+layout_mode = 2
+text = "SDFGI"
+
+[node name="SDFGI_Check" type="CheckBox" parent="Center/Panel/Scroll/VBox/SDFGI_Row" unique_id=2105308930]
+layout_mode = 2
+
+[node name="ShowFpsRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=1223011429]
+layout_mode = 2
+alignment = 1
+
+[node name="ShowFpsLabel" type="Label" parent="Center/Panel/Scroll/VBox/ShowFpsRow" unique_id=1502193386]
+layout_mode = 2
+text = "Показывать FPS"
+
+[node name="ShowFpsCheck" type="CheckBox" parent="Center/Panel/Scroll/VBox/ShowFpsRow" unique_id=2019356872]
+layout_mode = 2
+
+[node name="GraphicsTipsButton" type="Button" parent="Center/Panel/Scroll/VBox" unique_id=1269828074]
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn_normal")
+theme_override_styles/pressed = SubResource("4_btn_pressed")
+theme_override_styles/hover = SubResource("3_btn_hover")
+text = "Рекомендации для слабых устройств"
+
+[node name="CameraSectionLabel" type="Label" parent="Center/Panel/Scroll/VBox" unique_id=-2123471122]
+layout_mode = 2
+text = "Настройки камеры"
+
+[node name="CameraFovRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=971195464]
+layout_mode = 2
+alignment = 1
+
+[node name="CameraFovLabel" type="Label" parent="Center/Panel/Scroll/VBox/CameraFovRow" unique_id=694161513]
+layout_mode = 2
+text = "FOV (угол обзора)"
+
+[node name="CameraFovValue" type="Label" parent="Center/Panel/Scroll/VBox/CameraFovRow" unique_id=900291033]
+layout_mode = 2
+text = "75"
+
+[node name="CameraFovSlider" type="HSlider" parent="Center/Panel/Scroll/VBox" unique_id=1007787594]
+layout_mode = 2
+min_value = 60.0
+value = 75.0
+
+[node name="CameraDistanceRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=1658675039]
+layout_mode = 2
+alignment = 1
+
+[node name="CameraDistanceLabel" type="Label" parent="Center/Panel/Scroll/VBox/CameraDistanceRow" unique_id=302403331]
+layout_mode = 2
+text = "Дистанция"
+
+[node name="CameraDistanceValue" type="Label" parent="Center/Panel/Scroll/VBox/CameraDistanceRow" unique_id=2016452199]
+layout_mode = 2
+text = "100"
+
+[node name="CameraDistanceSlider" type="HSlider" parent="Center/Panel/Scroll/VBox" unique_id=1466402204]
+layout_mode = 2
+min_value = 70.0
+max_value = 130.0
+value = 100.0
+
+[node name="CameraRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=1382664180]
+layout_mode = 2
+alignment = 1
+
+[node name="CameraLabel" type="Label" parent="Center/Panel/Scroll/VBox/CameraRow" unique_id=1184489048]
+layout_mode = 2
+text = "Камера"
+
+[node name="CameraOption" type="OptionButton" parent="Center/Panel/Scroll/VBox/CameraRow" unique_id=1201680415]
+layout_mode = 2
+
+[node name="CameraViewRow" type="HBoxContainer" parent="Center/Panel/Scroll/VBox" unique_id=1892141906]
+layout_mode = 2
+alignment = 1
+
+[node name="CameraViewLabel" type="Label" parent="Center/Panel/Scroll/VBox/CameraViewRow" unique_id=1928576451]
+layout_mode = 2
+text = "Вид камеры"
+
+[node name="CameraViewOption" type="OptionButton" parent="Center/Panel/Scroll/VBox/CameraViewRow" unique_id=1150258350]
+layout_mode = 2
+
+[node name="SpacerBottom" type="Control" parent="Center/Panel/Scroll/VBox" unique_id=2025140018]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="ButtonsPanel" type="PanelContainer" parent="." unique_id=1533764109]
+custom_minimum_size = Vector2(520, 96)
+layout_mode = 1
+theme_override_styles/panel = SubResource("5_panel_small")
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="ButtonsPanel" unique_id=1968112742]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SavedLabel" type="Label" parent="ButtonsPanel/ButtonsVBox" unique_id=1355343534]
+modulate = Color(0.7, 0.9, 0.75, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonsRow" type="HBoxContainer" parent="ButtonsPanel/ButtonsVBox" unique_id=1825608714]
+layout_mode = 2
+alignment = 1
+
+[node name="BackButton" type="Button" parent="ButtonsPanel/ButtonsVBox/ButtonsRow" unique_id=2010854375]
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn_normal")
+theme_override_styles/pressed = SubResource("4_btn_pressed")
+theme_override_styles/hover = SubResource("3_btn_hover")
+text = "Назад"
+
+[node name="ResetButton" type="Button" parent="ButtonsPanel/ButtonsVBox/ButtonsRow" unique_id=1966265019]
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn_normal")
+theme_override_styles/pressed = SubResource("4_btn_pressed")
+theme_override_styles/hover = SubResource("3_btn_hover")
+text = "Сбросить"
+
+[node name="SaveButton" type="Button" parent="ButtonsPanel/ButtonsVBox/ButtonsRow" unique_id=495469386]
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn_normal")
+theme_override_styles/pressed = SubResource("4_btn_pressed")
+theme_override_styles/hover = SubResource("3_btn_hover")
+text = "Сохранить"
+
+[node name="Space" type="Label" parent="ButtonsPanel/ButtonsVBox" unique_id=1266812274]
+modulate = Color(0.7, 0.9, 0.75, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GraphicsTipsOverlay" type="Control" parent="." unique_id=1466842142]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TipsBackdrop" type="ColorRect" parent="GraphicsTipsOverlay" unique_id=1799652142]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="TipsCenter" type="CenterContainer" parent="GraphicsTipsOverlay" unique_id=1283591329]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TipsPanel" type="PanelContainer" parent="GraphicsTipsOverlay/TipsCenter" unique_id=1521173636]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1_panel")
+
+[node name="TipsVBox" type="VBoxContainer" parent="GraphicsTipsOverlay/TipsCenter/TipsPanel" unique_id=1965422051]
+layout_mode = 2
+alignment = 1
+
+[node name="TipsTitle" type="Label" parent="GraphicsTipsOverlay/TipsCenter/TipsPanel/TipsVBox" unique_id=884217046]
+layout_mode = 2
+text = "Рекомендации"
+
+[node name="TipsText" type="Label" parent="GraphicsTipsOverlay/TipsCenter/TipsPanel/TipsVBox" unique_id=1521173637]
+layout_mode = 2
+text = "Хотите больше FPS? Сначала отключите SDFGI и сглаживание — это дает самый сильный прирост. Затем понизьте разрешение. Дополнительно можно отключить SSAO, SSR и SSIL — обычно это дает еще +8–10 FPS."
+autowrap_mode = 3
+
+[node name="TipsClose" type="Button" parent="GraphicsTipsOverlay/TipsCenter/TipsPanel/TipsVBox" unique_id=1918067857]
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn_normal")
+theme_override_styles/pressed = SubResource("4_btn_pressed")
+theme_override_styles/hover = SubResource("3_btn_hover")
+
+[connection signal="value_changed" from="Center/Panel/Scroll/VBox/SensitivitySlider" to="." method="_on_sensitivity_changed"]
+[connection signal="value_changed" from="Center/Panel/Scroll/VBox/SfxSlider" to="." method="_on_sfx_changed"]
+[connection signal="value_changed" from="Center/Panel/Scroll/VBox/MusicSlider" to="." method="_on_music_changed"]
+[connection signal="item_selected" from="Center/Panel/Scroll/VBox/LanguageRow/LanguageOption" to="." method="_on_language_selected"]
+[connection signal="value_changed" from="Center/Panel/Scroll/VBox/GraphicsScaleSlider" to="." method="_on_graphics_scale_changed"]
+[connection signal="toggled" from="Center/Panel/Scroll/VBox/AA_Row/AA_Check" to="." method="_on_aa_toggled"]
+[connection signal="toggled" from="Center/Panel/Scroll/VBox/SSAO_Row/SSAO_Check" to="." method="_on_ssao_toggled"]
+[connection signal="toggled" from="Center/Panel/Scroll/VBox/SSR_Row/SSR_Check" to="." method="_on_ssr_toggled"]
+[connection signal="toggled" from="Center/Panel/Scroll/VBox/SSIL_Row/SSIL_Check" to="." method="_on_ssil_toggled"]
+[connection signal="toggled" from="Center/Panel/Scroll/VBox/SDFGI_Row/SDFGI_Check" to="." method="_on_sdfgi_toggled"]
+[connection signal="toggled" from="Center/Panel/Scroll/VBox/ShowFpsRow/ShowFpsCheck" to="." method="_on_show_fps_toggled"]
+[connection signal="pressed" from="Center/Panel/Scroll/VBox/GraphicsTipsButton" to="." method="_on_graphics_tips_pressed"]
+[connection signal="value_changed" from="Center/Panel/Scroll/VBox/CameraFovSlider" to="." method="_on_fov_changed"]
+[connection signal="value_changed" from="Center/Panel/Scroll/VBox/CameraDistanceSlider" to="." method="_on_distance_changed"]
+[connection signal="item_selected" from="Center/Panel/Scroll/VBox/CameraRow/CameraOption" to="." method="_on_camera_mode_selected"]
+[connection signal="item_selected" from="Center/Panel/Scroll/VBox/CameraViewRow/CameraViewOption" to="." method="_on_camera_view_selected"]
+[connection signal="pressed" from="ButtonsPanel/ButtonsVBox/ButtonsRow/BackButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ButtonsPanel/ButtonsVBox/ButtonsRow/ResetButton" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="ButtonsPanel/ButtonsVBox/ButtonsRow/SaveButton" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="GraphicsTipsOverlay/TipsCenter/TipsPanel/TipsVBox/TipsClose" to="." method="_on_graphics_tips_close"]

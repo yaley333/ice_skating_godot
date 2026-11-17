@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bgad8ctv7wxmy"]
+
+[ext_resource type="PackedScene" uid="uid://7y4eb44a8b5i" path="res://glb_models/d29bd6b5eada310ad599e7ecb2cdd877.glb" id="1"]
+
+[node name="led1" unique_id=646293425 instance=ExtResource("1")]

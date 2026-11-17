@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ehatw60jytwm"]
+
+[ext_resource type="PackedScene" uid="uid://c6ob7q11admtd" path="res://glb_models/b4d5c58d4f65ba4226ce3f904d89967d.glb" id="1"]
+
+[node name="massoni" unique_id=55705492 instance=ExtResource("1")]

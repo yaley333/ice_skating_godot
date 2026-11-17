@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cumyb3t3cfayv"]
+
+[ext_resource type="PackedScene" uid="uid://bpivugu31cuud" path="res://glb_models/d5a45c6a9c13ecf219006c2f2d0799db.glb" id="1"]
+
+[node name="masson5" unique_id=1604741392 instance=ExtResource("1")]

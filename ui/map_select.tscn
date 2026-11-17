@@ -1,0 +1,258 @@
+[gd_scene format=3 uid="uid://bj5up4xhufwki"]
+
+[ext_resource type="Script" uid="uid://d2s3x8p6383g8" path="res://scripts/ui/map_select.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://denlb6gexxrjt" path="res://images/worlds/world1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bon46g24cav3y" path="res://images/worlds/world2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dh462a1yjmby" path="res://images/worlds/world3.png" id="4"]
+
+[sub_resource type="StyleBoxFlat" id="1_panel_normal"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.1, 0.14, 0.18, 0.85)
+border_color = Color(0.2, 0.28, 0.35, 0.9)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="2_panel_selected"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.12, 0.18, 0.24, 0.9)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.35, 0.7, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="3_btn_normal"]
+content_margin_left = 20.0
+content_margin_top = 12.0
+content_margin_right = 20.0
+content_margin_bottom = 12.0
+bg_color = Color(0.2, 0.26, 0.34, 0.9)
+border_color = Color(1, 1, 1, 0.18)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.25)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="5_btn_pressed"]
+content_margin_left = 20.0
+content_margin_top = 12.0
+content_margin_right = 20.0
+content_margin_bottom = 12.0
+bg_color = Color(0.16, 0.22, 0.3, 0.95)
+border_color = Color(0.8, 0.9, 1, 0.2)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxEmpty" id="6_btn_empty"]
+
+[sub_resource type="StyleBoxFlat" id="4_btn_hover"]
+content_margin_left = 20.0
+content_margin_top = 12.0
+content_margin_right = 20.0
+content_margin_bottom = 12.0
+bg_color = Color(0.23, 0.3, 0.4, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9, 0.97, 1, 0.28)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0.2, 0.7, 1, 0.2)
+shadow_size = 10
+
+[node name="MapSelect" type="Control" unique_id=353619535]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+panel_normal = SubResource("1_panel_normal")
+panel_selected = SubResource("2_panel_selected")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1286400945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.09, 0.12, 1)
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1179990129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="Margin" unique_id=1487834814]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 14
+
+[node name="TopBar" type="HBoxContainer" parent="Margin/VBox" unique_id=646800123]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BackButton" type="Button" parent="Margin/VBox/TopBar" unique_id=260915539]
+layout_mode = 2
+theme_override_styles/normal = SubResource("3_btn_normal")
+theme_override_styles/pressed = SubResource("5_btn_pressed")
+text = "Назад"
+
+[node name="Title" type="Label" parent="Margin/VBox/TopBar" unique_id=1869127277]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Выбор карты"
+
+[node name="CardsScroll" type="ScrollContainer" parent="Margin/VBox" unique_id=1347834786]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Cards" type="HBoxContainer" parent="Margin/VBox/CardsScroll" unique_id=625919365]
+custom_minimum_size = Vector2(0, 190)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="World1Panel" type="PanelContainer" parent="Margin/VBox/CardsScroll/Cards" unique_id=883799718]
+custom_minimum_size = Vector2(300, 170)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("1_panel_normal")
+
+[node name="Margin" type="MarginContainer" parent="Margin/VBox/CardsScroll/Cards/World1Panel" unique_id=667962028]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="World1Button" type="Button" parent="Margin/VBox/CardsScroll/Cards/World1Panel/Margin" unique_id=2019310774]
+custom_minimum_size = Vector2(288, 158)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("6_btn_empty")
+theme_override_styles/pressed = SubResource("6_btn_empty")
+theme_override_styles/hover = SubResource("6_btn_empty")
+theme_override_styles/disabled = SubResource("6_btn_empty")
+icon = ExtResource("2")
+icon_alignment = 1
+expand_icon = true
+
+[node name="World2Panel" type="PanelContainer" parent="Margin/VBox/CardsScroll/Cards" unique_id=1485479536]
+custom_minimum_size = Vector2(300, 170)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("1_panel_normal")
+
+[node name="Margin" type="MarginContainer" parent="Margin/VBox/CardsScroll/Cards/World2Panel" unique_id=592730136]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="World2Button" type="Button" parent="Margin/VBox/CardsScroll/Cards/World2Panel/Margin" unique_id=1473902601]
+custom_minimum_size = Vector2(288, 158)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("6_btn_empty")
+theme_override_styles/pressed = SubResource("6_btn_empty")
+theme_override_styles/hover = SubResource("6_btn_empty")
+theme_override_styles/disabled = SubResource("6_btn_empty")
+icon = ExtResource("3")
+icon_alignment = 1
+expand_icon = true
+
+[node name="World3Panel" type="PanelContainer" parent="Margin/VBox/CardsScroll/Cards" unique_id=574420814]
+custom_minimum_size = Vector2(300, 170)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("1_panel_normal")
+
+[node name="Margin" type="MarginContainer" parent="Margin/VBox/CardsScroll/Cards/World3Panel" unique_id=1942654680]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="World3Button" type="Button" parent="Margin/VBox/CardsScroll/Cards/World3Panel/Margin" unique_id=2001239919]
+custom_minimum_size = Vector2(288, 158)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("6_btn_empty")
+theme_override_styles/pressed = SubResource("6_btn_empty")
+theme_override_styles/hover = SubResource("6_btn_empty")
+theme_override_styles/disabled = SubResource("6_btn_empty")
+icon = ExtResource("4")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BottomBar" type="HBoxContainer" parent="Margin/VBox" unique_id=2093266174]
+layout_mode = 2
+alignment = 2
+
+[node name="StartButton" type="Button" parent="Margin/VBox/BottomBar" unique_id=956862840]
+custom_minimum_size = Vector2(260, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("3_btn_normal")
+theme_override_styles/pressed = SubResource("5_btn_pressed")
+theme_override_styles/hover = SubResource("4_btn_hover")
+text = "Начать игру"
+
+[node name="LoadingOverlay" type="ColorRect" parent="." unique_id=1024882908]
+visible = false
+z_index = 100
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.35)
+
+[node name="LoadingCenter" type="CenterContainer" parent="LoadingOverlay" unique_id=824747259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoadingLabel" type="Label" parent="LoadingOverlay/LoadingCenter" unique_id=1035124123]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Загрузка..."

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dpi0rbpaneaar"]
+
+[ext_resource type="PackedScene" uid="uid://1r8mcdrkny1p" path="res://eeec6fc21b79ffe13b660c5323a34001.glb" id="1"]
+
+[node name="massoni-kamen" unique_id=1480339046 instance=ExtResource("1")]

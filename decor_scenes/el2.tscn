@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://w3802fvojkbx"]
+
+[ext_resource type="PackedScene" uid="uid://dg0k53d4cklun" path="res://glb_models/d18cda91ea5c87f670bd94426269f478.glb" id="1"]
+
+[node name="convert" unique_id=1987261029 instance=ExtResource("1")]

@@ -1,0 +1,264 @@
+[gd_scene format=3 uid="uid://dirug481jbxce"]
+
+[ext_resource type="Script" uid="uid://bnf5d5hyivhws" path="res://scripts/ui/support_menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://clmipen6ovkun" path="res://images/tether_icon.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://du4cch3qtf2qb" path="res://images/eth_icon.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://kmcixugedxjh" path="res://images/sol_icon.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ckesegb5vlk2q" path="res://images/btc_icon.png" id="5"]
+
+[sub_resource type="StyleBoxFlat" id="2_btn"]
+content_margin_left = 20.0
+content_margin_top = 12.0
+content_margin_right = 20.0
+content_margin_bottom = 12.0
+bg_color = Color(0.2, 0.26, 0.34, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 0.18)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.25)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="1_panel"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.12, 0.16, 0.22, 0.86)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.84, 0.95, 0.35)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0, 0, 0, 0.35)
+shadow_size = 16
+shadow_offset = Vector2(0, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gnomq"]
+load_path = "res://.godot/imported/sbp.png-e05197f08edb8e15cf07d1990172c4b2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2im28"]
+load_path = "res://.godot/imported/ton_icon.png-432550cd869c47bf2d75412c6f51335b.ctex"
+
+[node name="SupportMenu" type="Control" unique_id=1291726074]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="." unique_id=339557325]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.09, 0.12, 1)
+
+[node name="HeaderTitle" type="Label" parent="." unique_id=909358967]
+layout_mode = 1
+offset_left = 22.0
+offset_top = 16.0
+offset_right = 520.0
+offset_bottom = 54.0
+text = "Support Developer"
+
+[node name="BackButton" type="Button" parent="." unique_id=899813506]
+layout_mode = 1
+offset_left = 22.0
+offset_top = 60.0
+offset_right = 160.0
+offset_bottom = 110.0
+theme_override_styles/normal = SubResource("2_btn")
+text = "Back"
+
+[node name="Content" type="MarginContainer" parent="." unique_id=716826364]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Center" type="CenterContainer" parent="Content" unique_id=732821750]
+layout_mode = 2
+
+[node name="Scroll" type="ScrollContainer" parent="Content/Center" unique_id=115758436]
+custom_minimum_size = Vector2(760, 520)
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="Content/Center/Scroll" unique_id=326943945]
+layout_mode = 2
+theme_override_styles/panel = SubResource("1_panel")
+
+[node name="CornerSnowLeft" type="Label" parent="Content/Center/Scroll/Panel" unique_id=1398997219]
+modulate = Color(0.75, 0.92, 1, 0.9)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "❄"
+
+[node name="CornerSnowRight" type="Label" parent="Content/Center/Scroll/Panel" unique_id=120618027]
+modulate = Color(0.75, 0.92, 1, 0.9)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "❄"
+
+[node name="VBox" type="VBoxContainer" parent="Content/Center/Scroll/Panel" unique_id=692408205]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="SbpButton" type="Button" parent="Content/Center/Scroll/Panel/VBox" unique_id=754100498]
+custom_minimum_size = Vector2(620, 58)
+layout_mode = 2
+theme_override_constants/icon_max_width = 48
+theme_override_styles/normal = SubResource("2_btn")
+text = "Перевод по карте (Сбер)"
+icon = SubResource("CompressedTexture2D_gnomq")
+
+[node name="CryptoTitle" type="Label" parent="Content/Center/Scroll/Panel/VBox" unique_id=1658136891]
+layout_mode = 2
+text = "Cryptocurrency"
+
+[node name="Erc20Button" type="Button" parent="Content/Center/Scroll/Panel/VBox" unique_id=1629151725]
+custom_minimum_size = Vector2(620, 58)
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn")
+text = "USDT ERC20"
+icon = ExtResource("2")
+
+[node name="UsdtSolButton" type="Button" parent="Content/Center/Scroll/Panel/VBox" unique_id=1772594949]
+custom_minimum_size = Vector2(620, 58)
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn")
+text = "USDT SOL"
+icon = ExtResource("2")
+
+[node name="EthButton" type="Button" parent="Content/Center/Scroll/Panel/VBox" unique_id=1775471822]
+custom_minimum_size = Vector2(620, 58)
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn")
+text = "ETH"
+icon = ExtResource("3")
+
+[node name="SolButton" type="Button" parent="Content/Center/Scroll/Panel/VBox" unique_id=1699464591]
+custom_minimum_size = Vector2(620, 58)
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn")
+text = "Solana"
+icon = ExtResource("4")
+
+[node name="BtcButton" type="Button" parent="Content/Center/Scroll/Panel/VBox" unique_id=691540753]
+custom_minimum_size = Vector2(620, 58)
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn")
+text = "BTC"
+icon = ExtResource("5")
+
+[node name="TonButton" type="Button" parent="Content/Center/Scroll/Panel/VBox" unique_id=1007617958]
+custom_minimum_size = Vector2(620, 58)
+layout_mode = 2
+theme_override_constants/icon_max_width = 48
+theme_override_styles/normal = SubResource("2_btn")
+text = "TON"
+icon = SubResource("CompressedTexture2D_2im28")
+
+[node name="AddressOverlay" type="Control" parent="." unique_id=274094058]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Backdrop" type="ColorRect" parent="AddressOverlay" unique_id=2025327540]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="Center" type="CenterContainer" parent="AddressOverlay" unique_id=674795722]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="AddressOverlay/Center" unique_id=1573037858]
+custom_minimum_size = Vector2(540, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1_panel")
+
+[node name="VBox" type="VBoxContainer" parent="AddressOverlay/Center/Panel" unique_id=373903100]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="AddressOverlay/Center/Panel/VBox" unique_id=908113930]
+layout_mode = 2
+text = "Address"
+
+[node name="QR" type="TextureRect" parent="AddressOverlay/Center/Panel/VBox" unique_id=1338621939]
+custom_minimum_size = Vector2(280, 280)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AddressValue" type="LineEdit" parent="AddressOverlay/Center/Panel/VBox" unique_id=85906011]
+layout_mode = 2
+placeholder_text = "Address"
+editable = false
+
+[node name="ButtonsRow" type="HBoxContainer" parent="AddressOverlay/Center/Panel/VBox" unique_id=480781966]
+layout_mode = 2
+alignment = 1
+
+[node name="CopyButton" type="Button" parent="AddressOverlay/Center/Panel/VBox/ButtonsRow" unique_id=579349545]
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn")
+text = "Copy"
+
+[node name="CloseOverlayButton" type="Button" parent="AddressOverlay/Center/Panel/VBox/ButtonsRow" unique_id=268862532]
+layout_mode = 2
+theme_override_styles/normal = SubResource("2_btn")
+text = "Close"
+
+[node name="CopiedLabel" type="Label" parent="AddressOverlay/Center/Panel/VBox" unique_id=1373007551]
+visible = false
+layout_mode = 2
+text = "Copied"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Content/Center/Scroll/Panel/VBox/SbpButton" to="." method="_on_sbp_pressed"]
+[connection signal="pressed" from="Content/Center/Scroll/Panel/VBox/Erc20Button" to="." method="_on_erc20_pressed"]
+[connection signal="pressed" from="Content/Center/Scroll/Panel/VBox/UsdtSolButton" to="." method="_on_usdt_sol_pressed"]
+[connection signal="pressed" from="Content/Center/Scroll/Panel/VBox/EthButton" to="." method="_on_eth_pressed"]
+[connection signal="pressed" from="Content/Center/Scroll/Panel/VBox/SolButton" to="." method="_on_sol_pressed"]
+[connection signal="pressed" from="Content/Center/Scroll/Panel/VBox/BtcButton" to="." method="_on_btc_pressed"]
+[connection signal="pressed" from="Content/Center/Scroll/Panel/VBox/TonButton" to="." method="_on_ton_pressed"]
+[connection signal="pressed" from="AddressOverlay/Center/Panel/VBox/ButtonsRow/CopyButton" to="." method="_on_copy_pressed"]
+[connection signal="pressed" from="AddressOverlay/Center/Panel/VBox/ButtonsRow/CloseOverlayButton" to="." method="_on_close_overlay_pressed"]

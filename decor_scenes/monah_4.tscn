@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://uiehc171wkiw"]
+
+[ext_resource type="PackedScene" uid="uid://d2r1rtgwpw4mi" path="res://glb_models/4802bd1b6118103885582825ac27fa44.glb" id="1"]
+
+[node name="monah4" unique_id=1078083611 instance=ExtResource("1")]

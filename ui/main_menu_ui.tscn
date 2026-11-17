@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c017bdphg7ein"]
+
+[node name="MainMenuUI" type="Control" unique_id=1173064248]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1798985285]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Center" unique_id=505352459]
+layout_mode = 2
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="Center/VBox" unique_id=927568025]
+layout_mode = 2
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="Center/VBox" unique_id=2023507574]
+layout_mode = 2
+text = "Quit"

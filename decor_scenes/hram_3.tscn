@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b733ybcpck0y8"]
+
+[ext_resource type="PackedScene" uid="uid://dgh2gm4mwiovo" path="res://glb_models/939d6bfd0f8dd7e4de2663f517d6e555.glb" id="1"]
+
+[node name="hram3" unique_id=962107551 instance=ExtResource("1")]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b632dkl0k4j2a"]
+
+[ext_resource type="PackedScene" uid="uid://b3x515e6cs0sk" path="res://glb_models/a0290f34e5ec123fceddf7187e17318f.glb" id="1"]
+
+[node name="convert" unique_id=74732554 instance=ExtResource("1")]
+transform = Transform3D(1.395, 0, 0, 0, 1.395, 0, 0, 0, 1.395, 0, 0, 0)

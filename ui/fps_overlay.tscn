@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c3u8t4k0n5g2x"]
+
+[ext_resource type="Script" uid="uid://ddike5kbhb30x" path="res://scripts/ui/fps_overlay.gd" id="1"]
+
+[node name="FpsOverlay" type="CanvasLayer" unique_id=1594472181]
+script = ExtResource("1")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1394806190]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 44.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=2024847955]
+layout_mode = 2
+text = "FPS: 0"
